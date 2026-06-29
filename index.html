@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — À propos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">BTS<span>.</span>SIO</a>
+  <ul class="nav-links">
+    <li><a href="index.html"    data-fr="À PROPOS"     data-en="ABOUT">À PROPOS</a></li>
+    <li><a href="projects.html" data-fr="PROJETS"      data-en="PROJECTS">PROJETS</a></li>
+    <li><a href="veille.html"   data-fr="VEILLE TECHNO" data-en="TECH WATCH">VEILLE TECHNO</a></li>
+    <li><a href="contact.html"  data-fr="CONTACT"      data-en="CONTACT">CONTACT</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<main class="about-wrapper">
+  <div class="hero-bg-text" id="heroBgText">ÉTUDIANT</div>
+
+  <div class="about-content animate-in">
+    <div class="about-tag" data-fr="Étudiant BTS SIO — Option SLAM" data-en="BTS SIO Student — SLAM Track">
+      Étudiant BTS SIO — Option SLAM
+    </div>
+
+    <h1 class="about-name">
+      EWENN<br><span class="highlight">BOURLÈS</span>
+    </h1>
+
+    <div class="about-title"
+         data-fr="Développeur en formation ·"
+         data-en="Developer in training ·">
+      Développeur en formation ·
+    </div>
+
+    <p class="about-bio"
+       data-fr="Étudiant en 1ère année de BTS SIO option SLAM, passionné par le développement web et les nouvelles technologies. J'aime construire des projets concrets, apprendre de nouvelles choses et relever des défis techniques."
+       data-en="First-year BTS SIO student (SLAM track), passionate about web development and new technologies. I enjoy building real-world projects, learning new things and tackling technical challenges.">
+      Étudiant en 1ère année de BTS SIO option SLAM, passionné par le développement web et les nouvelles technologies. J'aime construire des projets concrets, apprendre de nouvelles choses et relever des défis techniques.
+    </p>
+
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-number">1</div>
+        <div class="stat-label" data-fr="An de formation" data-en="Year of training">An de formation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">3</div>
+        <div class="stat-label" data-fr="Projets réalisés" data-en="Projects completed">Projets réalisés</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4</div>
+        <div class="stat-label" data-fr="Semaines de stage" data-en="Weeks of internship">Semaines de stage</div>
+      </div>
+    </div>
+
+    <div class="skills-list">
+      <span class="skill-tag">HTML / CSS</span>
+      <span class="skill-tag">PHP</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">Git / GitHub</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">Réseau</span>
+      <span class="skill-tag">VS Code</span>
+    </div>
+  </div>
+
+  <div class="accent-line"></div>
+</main>
+
+<footer class="footer">
+  <span data-fr="© 2026 Portfolio BTS SIO — Développé avec passion"
+        data-en="© 2026 BTS SIO Portfolio — Built with passion">
+    © 2026 Portfolio BTS SIO — Développé avec passion
+  </span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

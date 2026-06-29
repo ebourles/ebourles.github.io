@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Articles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/veille.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">BTS<span>.</span>SIO</a>
+  <ul class="nav-links">
+    <li><a href="index.html"    data-fr="À PROPOS"      data-en="ABOUT">À PROPOS</a></li>
+    <li><a href="projects.html" data-fr="PROJETS"       data-en="PROJECTS">PROJETS</a></li>
+    <li><a href="veille.html"   data-fr="VEILLE TECHNO" data-en="TECH WATCH">VEILLE TECHNO</a></li>
+    <li><a href="contact.html"  data-fr="CONTACT"       data-en="CONTACT">CONTACT</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<main class="veille-detail-wrapper animate-in">
+
+  <a href="veille.html" class="veille-back">
+    <span class="veille-back-arrow">←</span>
+    <span data-fr="Retour à la veille" data-en="Back to tech watch">Retour à la veille</span>
+  </a>
+
+  <div class="veille-detail-header">
+    <div>
+      <div class="veille-detail-icon" id="vd-icon"></div>
+      <div class="veille-detail-title" id="vd-title"></div>
+      <div class="veille-detail-desc"  id="vd-desc"></div>
+    </div>
+    <div class="veille-detail-count" id="vd-count"></div>
+  </div>
+
+  <div class="veille-articles-list" id="vd-articles"></div>
+
+</main>
+
+<footer class="footer">
+  <span data-fr="© 2026 Portfolio BTS SIO — Développé avec passion"
+        data-en="© 2026 BTS SIO Portfolio — Built with passion">
+    © 2026 Portfolio BTS SIO — Développé avec passion
+  </span>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/veille.js"></script>
+<script>
+  // Charger le contenu une fois main.js initialisé (DOMContentLoaded déjà passé dans main.js)
+  document.addEventListener('DOMContentLoaded', loadVeilleDetail);
+</script>
+</body>
+</html>

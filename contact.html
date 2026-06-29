@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">BTS<span>.</span>SIO</a>
+  <ul class="nav-links">
+    <li><a href="index.html"    data-fr="À PROPOS"      data-en="ABOUT">À PROPOS</a></li>
+    <li><a href="projects.html" data-fr="PROJETS"       data-en="PROJECTS">PROJETS</a></li>
+    <li><a href="veille.html"   data-fr="VEILLE TECHNO" data-en="TECH WATCH">VEILLE TECHNO</a></li>
+    <li><a href="contact.html"  data-fr="CONTACT"       data-en="CONTACT">CONTACT</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<main class="contact-wrapper">
+
+  <div class="contact-left animate-in">
+    <div class="section-header">
+      <div class="section-tag" data-fr="Me contacter" data-en="Get in touch">Me contacter</div>
+      <h1 class="section-title" data-fr="CONTACT" data-en="CONTACT">CONTACT</h1>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="contact-label" data-fr="Email" data-en="Email">Email</span>
+        <span class="contact-value"><a href="mailto:prenom.nom@email.com">ewenn.bourles56@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label" data-fr="Localisation" data-en="Location">Localisation</span>
+        <span class="contact-value" data-fr="France 🇫🇷" data-en="France 🇫🇷">France 🇫🇷</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value"><a href="https://www.linkedin.com/in/ewenn-bourl%C3%A8s-997b1b3a9/">linkedin.com/in/ewenn-bourlès</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value"><a href="https://github.com/ebourles">github.com/ebourles</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label" data-fr="Formation" data-en="Education">Formation</span>
+        <span class="contact-value"
+              data-fr="BTS SIO option SLAM"
+              data-en="BTS SIO SLAM">
+          BTS SIO option SLAM
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-divider"></div>
+
+  <!--
+  <div class="contact-right animate-in-delay-1">
+    <div class="form-group">
+      <label class="form-label" data-fr="Nom" data-en="Name">Nom</label>
+      <input class="form-input" type="text" placeholder="Jean Dupont">
+    </div>
+    <div class="form-group">
+      <label class="form-label" data-fr="Email" data-en="Email">Email</label>
+      <input class="form-input" type="email" placeholder="jean@example.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label" data-fr="Sujet" data-en="Subject">Sujet</label>
+      <input class="form-input" type="text"
+             data-fr-placeholder="Alternance / Stage / Collaboration"
+             data-en-placeholder="Apprenticeship / Internship / Collaboration"
+             placeholder="Alternance / Stage / Collaboration">
+    </div>
+    <div class="form-group">
+      <label class="form-label" data-fr="Message" data-en="Message">Message</label>
+      <textarea class="form-textarea"
+                data-fr-placeholder="Décrivez votre proposition..."
+                data-en-placeholder="Describe your proposal..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="handleSubmit(this)">
+      <span data-fr="ENVOYER" data-en="SEND">ENVOYER</span>
+    </button>
+  </div>
+-->
+
+</main>
+
+<footer class="footer">
+  <span data-fr="© 2026 Portfolio BTS SIO — Développé avec passion"
+        data-en="© 2026 BTS SIO Portfolio — Built with passion">
+    © 2026 Portfolio BTS SIO — Développé avec passion
+  </span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

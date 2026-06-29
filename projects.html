@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Projets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">BTS<span>.</span>SIO</a>
+  <ul class="nav-links">
+    <li><a href="index.html"    data-fr="À PROPOS"      data-en="ABOUT">À PROPOS</a></li>
+    <li><a href="projects.html" data-fr="PROJETS"       data-en="PROJECTS">PROJETS</a></li>
+    <li><a href="veille.html"   data-fr="VEILLE TECHNO" data-en="TECH WATCH">VEILLE TECHNO</a></li>
+    <li><a href="contact.html"  data-fr="CONTACT"       data-en="CONTACT">CONTACT</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn"        data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<main class="page-wrapper">
+  <div class="section-header animate-in">
+    <div class="section-tag" data-fr="Travaux scolaires & personnels" data-en="School & personal work">
+      Travaux scolaires & personnels
+    </div>
+    <h1 class="section-title" data-fr="PROJETS" data-en="PROJECTS">PROJETS</h1>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card animate-in-delay-1">
+      <div class="project-num">01</div>
+      <div class="project-type" data-fr="Projet scolaire — BTS SIO" data-en="School project — BTS SIO">Projet scolaire — BTS SIO</div>
+      <div class="project-name">CREATION DE SITE WEB STATIC</div>
+      <div class="project-desc"
+           data-fr="Site web static développée en HTML/CSS, dans le cadre du BTS."
+           data-en="Static website developed in HTML/CSS as part of the BTS program.">
+        Site web static développée en HTML/CSS, dans le cadre du BTS.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">HTML/CSS</span>
+      </div>
+      <a href="#" class="project-link">
+        <span data-fr="Voir le projet" data-en="View project">Voir le projet</span> →
+      </a>
+    </div>
+
+    <div class="project-card animate-in-delay-2">
+      <div class="project-num">02</div>
+      <div class="project-type" data-fr="Projet scolaire — BTS SIO" data-en="School project — BTS SIO">Projet scolaire — BTS SIO</div>
+      <div class="project-name">CREATION D'UNE APPLICATION WEB</div>
+      <div class="project-desc"
+           data-fr="Application web de gestion de deplacement développée en PHP/MySQL dans le cadre du BTS. Permet d'ajouter, modifier et supprimer des repas/nuits d'hotel/kilometrage effectuer, avec une interface d'administration sécurisée par login."
+           data-en="Travel management web application developed in PHP/MySQL as part of the BTS program. It allows users to add, edit, and delete records for meals, hotel stays, and mileage, and features an administration interface secured by a login.">
+        Application web de gestion de deplacement développée en PHP/MySQL dans le cadre du BTS. Permet d'ajouter, modifier et supprimer des repas/nuits d'hotel/kilometrage effectuer, avec une interface d'administration sécurisée par login.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">PHP</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">HTML/CSS</span>
+        <span class="project-tag">LAMP Server</span>
+      </div>
+      <a href="#" class="project-link">
+        <span data-fr="Voir le projet" data-en="View project">Voir le projet</span> →
+      </a>
+    </div>
+
+    <div class="project-card animate-in-delay-3">
+      <div class="project-num">03</div>
+      <div class="project-type" data-fr="Stage — 4 semaines" data-en="Internship — 4 weeks">Stage — 4 semaines</div>
+      <div class="project-name">SITE VITRINE PME -- BOUTIQUE GUMS</div>
+      <div class="project-desc"
+           data-fr="Création d'un site vitrine pour une PME locale lors de mon stage de 1ère année. Développement from scratch en HTML/CSS/JS, mise en ligne sur hébergement mutualisé et formation du client à la mise à jour du contenu."
+           data-en="Created a showcase website for a local SME during my first-year internship. Built from scratch in HTML/CSS/JS, deployed on shared hosting and trained the client to update content.">
+        Création d'un site vitrine pour une PME locale lors de mon stage de 1ère année. Développement from scratch en HTML/CSS/JS, mise en ligne sur hébergement mutualisé et formation du client à la mise à jour du contenu.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">HTML/CSS</span>
+        <span class="project-tag">JavaScript</span>
+        <span class="project-tag">CPanel</span>
+      </div>
+      <a href="#" class="project-link">
+        <span data-fr="Voir le projet" data-en="View project">Voir le projet</span> →
+      </a>
+    </div>
+
+    <div class="project-card animate-in-delay-4">
+      <div class="project-num">04</div>
+      <div class="project-type" data-fr="Projet personel" data-en="Personal project">Projet personel</div>
+      <div class="project-name">CREATION DE SITE WEB STATIC</div>
+      <div class="project-desc"
+           data-fr="Site web static développée en HTML/CSS, dans l'univers de Cult Of The Lamb."
+           data-en="SStatic website developed in HTML/CSS, based on the Cult of the Lamb's univers.">
+        Site web static développée en HTML/CSS, dans l'univers de Cult Of The Lamb.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">PHP</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">HTML/CSS</span>
+      </div>
+      <a href="#" class="project-link">
+        <span data-fr="Voir le projet" data-en="View project">Voir le projet</span> →
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <span data-fr="© 2026 Portfolio BTS SIO — Développé avec passion"
+        data-en="© 2026 BTS SIO Portfolio — Built with passion">
+    © 2026 Portfolio BTS SIO — Développé avec passion
+  </span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

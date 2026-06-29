@@ -1,0 +1,208 @@
+/* ============================================================
+   GLOBAL.CSS — Variables, reset, nav, footer, curseur, animations
+   ============================================================ */
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark2: #1a1a1a;
+  --gray: #2a2a2a;
+  --gray2: #3d3d3d;
+  --gray-text: #888888;
+  --light: #d4d4d4;
+  --white: #f0f0f0;
+  --red: #c0111f;
+  --red-dark: #8b0d17;
+  --red-light: #e01424;
+  --accent: #c0111f;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--light);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ---- Curseur personnalisé ---- */
+.cursor {
+  width: 10px; height: 10px;
+  background: var(--red);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(192,17,31,0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+.cursor.hover  { transform: translate(-50%, -50%) scale(2); background: var(--red-light); }
+.cursor-ring.hover { transform: translate(-50%, -50%) scale(1.5); border-color: var(--red); }
+
+/* ---- Texture bruit ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ---- Navigation ---- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 4px;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--red); }
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-text);
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--red);
+  transition: width 0.3s;
+}
+.nav-links a:hover         { color: var(--white); }
+.nav-links a:hover::after  { width: 100%; }
+.nav-links a.active        { color: var(--red); }
+.nav-links a.active::after { width: 100%; }
+
+/* ---- Toggle langue ---- */
+.lang-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--dark2);
+  border: 1px solid var(--gray);
+  border-radius: 2px;
+  padding: 4px;
+}
+.lang-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gray-text);
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+.lang-btn.active { background: var(--red); color: var(--white); }
+
+/* ---- Layout de page ---- */
+.page-wrapper {
+  min-height: 100vh;
+  padding: 120px 60px 80px;
+}
+
+/* ---- En-tête de section réutilisable ---- */
+.section-header  { margin-bottom: 64px; }
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-tag::before { content: ''; display: block; width: 30px; height: 1px; background: var(--red); }
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 6vw, 80px);
+  letter-spacing: 2px;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* ---- Footer ---- */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gray2);
+  text-transform: uppercase;
+  border-top: 1px solid var(--dark2);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--red-dark); }
+
+/* ---- Animations ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-in { animation: fadeInUp 0.6s ease forwards; }
+.animate-in-delay-1 { animation: fadeInUp 0.5s ease 0.1s both; }
+.animate-in-delay-2 { animation: fadeInUp 0.5s ease 0.2s both; }
+.animate-in-delay-3 { animation: fadeInUp 0.5s ease 0.3s both; }
+.animate-in-delay-4 { animation: fadeInUp 0.5s ease 0.4s both; }
+.animate-in-delay-5 { animation: fadeInUp 0.5s ease 0.5s both; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  nav { padding: 20px 24px; }
+  .page-wrapper { padding: 100px 24px 60px; }
+  .nav-links { gap: 20px; }
+}

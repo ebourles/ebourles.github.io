@@ -1,0 +1,119 @@
+/* ============================================================
+   CONTACT.CSS — Page Contact
+   ============================================================ */
+
+.contact-wrapper {
+  min-height: 100vh;
+  padding: 120px 60px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+a:hover{
+  color: var(--red);
+}
+
+.contact-left  { flex: 1; }
+.contact-right { flex: 1; }
+
+.contact-info {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.contact-value { font-size: 15px; color: var(--light); }
+.contact-value a { color: var(--light); text-decoration: none; transition: color 0.2s; }
+.contact-value a:hover { color: var(--red); }
+
+.contact-available { color: #4ade80; }
+
+.contact-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gray2), transparent);
+  min-height: 400px;
+  flex-shrink: 0;
+}
+
+/* ---- Formulaire ---- */
+.form-group { margin-bottom: 24px; }
+
+.form-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: var(--dark2);
+  border: 1px solid var(--gray);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+  cursor: none;
+}
+.form-input:focus,
+.form-textarea:focus { border-color: var(--red); }
+.form-textarea       { min-height: 140px; }
+
+.btn-submit {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 16px 48px;
+  cursor: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--red-dark);
+  transition: left 0.3s;
+}
+.btn-submit:hover::before { left: 0; }
+.btn-submit span          { position: relative; z-index: 1; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .contact-wrapper  { flex-direction: column; padding: 100px 24px 60px; }
+  .contact-divider  { display: none; }
+}
